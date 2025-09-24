@@ -1,0 +1,68 @@
+import React from 'react';
+
+const Logo = ({ size = 'medium', className = '' }) => {
+  const sizeClasses = {
+    small: 'w-8 h-8',
+    medium: 'w-12 h-12',
+    large: 'w-16 h-16',
+    xlarge: 'w-20 h-20'
+  };
+
+  return (
+    <div className={`${sizeClasses[size]} ${className}`}>
+      <svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Main bin body */}
+        <rect x="12" y="20" width="40" height="36" rx="4" fill="#10b981" stroke="#047857" strokeWidth="2"/>
+        
+        {/* Orange lid */}
+        <path d="M8 20 L56 20 L52 16 L12 16 Z" fill="#f59e0b" stroke="#d97706" strokeWidth="2"/>
+        
+        {/* Lid handle */}
+        <rect x="28" y="12" width="8" height="4" rx="2" fill="#f59e0b" stroke="#d97706" strokeWidth="1"/>
+        
+        {/* Friendly face */}
+        <circle cx="24" cy="32" r="3" fill="#ffffff" stroke="#047857" strokeWidth="1"/>
+        <circle cx="40" cy="32" r="3" fill="#ffffff" stroke="#047857" strokeWidth="1"/>
+        <circle cx="24" cy="32" r="1.5" fill="#10b981"/>
+        <circle cx="40" cy="32" r="1.5" fill="#10b981"/>
+        <circle cx="24" cy="32" r="0.5" fill="#000000"/>
+        <circle cx="40" cy="32" r="0.5" fill="#000000"/>
+        
+        {/* Eyebrows */}
+        <path d="M20 28 Q24 26 28 28" stroke="#047857" strokeWidth="1.5" fill="none"/>
+        <path d="M36 28 Q40 26 44 28" stroke="#047857" strokeWidth="1.5" fill="none"/>
+        
+        {/* Smile */}
+        <path d="M28 38 Q32 42 36 38" stroke="#047857" strokeWidth="2" fill="none"/>
+        
+        {/* Arms */}
+        {/* Left arm (resting on hip) */}
+        <ellipse cx="8" cy="40" rx="4" ry="8" fill="#10b981" stroke="#047857" strokeWidth="2" transform="rotate(-30 8 40)"/>
+        <circle cx="6" cy="46" r="3" fill="#ffffff" stroke="#047857" strokeWidth="1"/>
+        
+        {/* Right arm (thinking pose) */}
+        <ellipse cx="56" cy="32" rx="4" ry="8" fill="#10b981" stroke="#047857" strokeWidth="2" transform="rotate(30 56 32)"/>
+        <circle cx="58" cy="28" r="3" fill="#ffffff" stroke="#047857" strokeWidth="1"/>
+        
+        {/* Recycling symbol */}
+        <g transform="translate(32, 48)">
+          <path d="M-6,-4 L6,-4 L6,4 L0,0 Z" fill="#ffffff" stroke="#047857" strokeWidth="0.5"/>
+          <path d="M-6,4 L6,4 L0,0 L-6,-4 Z" fill="#ffffff" stroke="#047857" strokeWidth="0.5"/>
+          <path d="M0,0 L6,4 L-6,4 L-6,-4 Z" fill="#ffffff" stroke="#047857" strokeWidth="0.5"/>
+        </g>
+        
+        {/* Wheels */}
+        <circle cx="18" cy="58" r="3" fill="#374151" stroke="#1f2937" strokeWidth="1"/>
+        <circle cx="46" cy="58" r="3" fill="#374151" stroke="#1f2937" strokeWidth="1"/>
+        <circle cx="18" cy="58" r="1" fill="#6b7280"/>
+        <circle cx="46" cy="58" r="1" fill="#6b7280"/>
+      </svg>
+    </div>
+  );
+};
+
+export default Logo;
+
+
+
+
